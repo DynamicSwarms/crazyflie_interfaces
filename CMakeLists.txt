@@ -38,6 +38,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Spiral.msg"
   "msg/TakeoffWithVelocity.msg"
   "msg/LandWithVelocity.msg"
+  "msg/PoseStampedArray.msg"
   DEPENDENCIES std_msgs geometry_msgs builtin_interfaces
 )
 
