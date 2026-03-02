@@ -18,26 +18,28 @@ find_package(geometry_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/GoTo.msg"
-  "msg/Land.msg"
-  "msg/NotifySetpointsStop.msg"
-  "msg/SetGroupMask.msg"
-  "msg/StartTrajectory.msg"
-  "msg/Stop.msg"
-  "msg/Takeoff.msg"
-  "msg/UpdateParams.msg"
-  "msg/UploadTrajectory.msg"
-  "msg/LogBlock.msg"
-  "msg/GenericLogData.msg"
+  "msg/ConnectionStatistics.msg"
+  "msg/ConnectionStatisticsArray.msg"
   "msg/FullState.msg"
-  "msg/VelocityWorld.msg"
-  "msg/TrajectoryPolynomialPiece.msg"
+  "msg/LogDataGeneric.msg"
   "msg/Hover.msg"
-  "msg/SendExternalPose.msg"
+  "msg/LogBlock.msg"
   "msg/Position.msg"
-  "msg/Spiral.msg"
-  "msg/TakeoffWithVelocity.msg"
-  "msg/LandWithVelocity.msg"
+  "msg/Status.msg"
+  "msg/TrajectoryPolynomialPiece.msg"
+  "msg/VelocityWorld.msg"
+  "srv/GoTo.srv"
+  "srv/Land.srv"
+  "srv/NotifySetpointsStop.srv"
+  "srv/SetGroupMask.srv"
+  "srv/StartTrajectory.srv"
+  "srv/Stop.srv"
+  "srv/Takeoff.srv"
+  "srv/UpdateParams.srv"
+  "srv/UploadTrajectory.srv"
+  "srv/RemoveLogging.srv"
+  "srv/AddLogging.srv"
+  "srv/Arm.srv"
   "msg/PoseStampedArray.msg"
   DEPENDENCIES std_msgs geometry_msgs builtin_interfaces
 )
@@ -53,5 +55,7 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+ament_export_dependencies(rosidl_default_runtime)
 
 ament_package()

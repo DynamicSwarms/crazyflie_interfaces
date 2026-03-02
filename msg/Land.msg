@@ -1,5 +1,0 @@
-uint8 group_mask
-float32 height
-float32 yaw
-bool use_current_yaw
-builtin_interfaces/Duration duration
