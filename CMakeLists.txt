@@ -40,6 +40,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/RemoveLogging.srv"
   "srv/AddLogging.srv"
   "srv/Arm.srv"
+  "srv/AddCrazyflie.srv"
+  "srv/RemoveCrazyflie.srv"
   "msg/PoseStampedArray.msg"
   DEPENDENCIES std_msgs geometry_msgs builtin_interfaces
 )
