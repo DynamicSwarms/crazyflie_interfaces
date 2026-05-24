@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.10)
 project(crazyflie_interfaces)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -42,7 +42,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/Arm.srv"
   "srv/AddCrazyflie.srv"
   "srv/RemoveCrazyflie.srv"
-  "msg/PoseStampedArray.msg"
+  "msg/PoseNamed.msg"
+  "msg/PoseNamedArray.msg"
   DEPENDENCIES std_msgs geometry_msgs builtin_interfaces
 )
 
