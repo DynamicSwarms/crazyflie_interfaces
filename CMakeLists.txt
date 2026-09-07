@@ -20,6 +20,8 @@ find_package(builtin_interfaces REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ConnectionStatistics.msg"
   "msg/ConnectionStatisticsArray.msg"
+  "msg/CrazyflieLinkQuality.msg"
+  "msg/CrazyflieLinkQualityArray.msg"
   "msg/FullState.msg"
   "msg/LogDataGeneric.msg"
   "msg/Hover.msg"
